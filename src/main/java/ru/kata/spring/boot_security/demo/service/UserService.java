@@ -18,5 +18,6 @@ public interface UserService {
     void updateUser(User user);
 
 
+    User getCurrentUser();
 }
 
