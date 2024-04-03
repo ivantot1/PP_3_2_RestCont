@@ -28,12 +28,13 @@ public class UserController {
         this.userService = userService;
     }
 
-    //    @GetMapping
-//    public ResponseEntity<User> getCurrentUser(Principal principal) {
-//        return new ResponseEntity<>(userService.findUserByUsername(principal.getName()), HttpStatus.OK);
-//    }
-    @GetMapping
-    public ResponseEntity<User> getUser() {
-        return new ResponseEntity<>(userService.getCurrentUser(), HttpStatus.OK);
+        @GetMapping
+    public ResponseEntity<User> getCurrentUser(Principal principal) {
+        return new ResponseEntity<>(userService.findUserByUsername(principal.getName()), HttpStatus.OK);
     }
+//    @GetMapping("/user")
+//    public String showUserPage(Principal principal, Model model) {
+//        model.addAttribute("user", userService.findUserByUsername(principal.getName()));
+//        return "user";
+//    }
 }
