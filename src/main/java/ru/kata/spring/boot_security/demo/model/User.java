@@ -64,12 +64,12 @@ public class User implements UserDetails {
         return username;
     }
 
-    public String getRoleNames() {
-        return roles.stream()
-                .map(role -> role.getName()
-                        .replace("ROLE_", ""))
-                .collect(Collectors.joining(" "));
-    }
+//    public String getRoleNames() {
+//        return roles.stream()
+//                .map(role -> role.getName()
+//                        .replace("ROLE_", ""))
+//                .collect(Collectors.joining(" "));
+//    }
 
     @Override
     public boolean isAccountNonExpired() {
