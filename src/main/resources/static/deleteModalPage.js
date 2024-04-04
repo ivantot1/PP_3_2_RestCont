@@ -1,6 +1,6 @@
 const id_del = document.getElementById('id_del');
 const name_del = document.getElementById('name_del');
-const lastName_del = document.getElementById("lastName_del")
+const lastname_del = document.getElementById("lastname_del")
 const age_del = document.getElementById("age_del")
 const email_del = document.getElementById('email_del');
 const role_del = document.getElementById("delete-role")
@@ -16,7 +16,7 @@ async function deleteModalData(id) {
             await usersPageDel.json().then(user => {
                 id_del.value = `${user.id}`;
                 name_del.value = `${user.username}`;
-                lastName_del.value = `${user.lastName}`;
+                lastname_del.value = `${user.lastname}`;
                 age_del.value = `${user.age}`;
                 email_del.value = `${user.email}`;
                 role_del.value = user.roles.map(r=>r.name).join(", ");

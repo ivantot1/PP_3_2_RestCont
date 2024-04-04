@@ -2,7 +2,7 @@ const role_ed = document.getElementById('edit-role');
 const form_ed = document.getElementById('formForEditing');
 const id_ed = document.getElementById('edit-id');
 const name_ed = document.getElementById('edit-first_name');
-const lastName_ed = document.getElementById('edit-last_name')
+const lastname_ed = document.getElementById('edit-last_name')
 const age_ed = document.getElementById('edit-age')
 const email_ed = document.getElementById('edit-email');
 const editModal = document.getElementById("editModal");
@@ -18,7 +18,7 @@ async function loadDataForEditModal(id) {
             console.log('userData', JSON.stringify(user))
             id_ed.value = `${user.id}`;
             name_ed.value = `${user.username}`;
-            lastName_ed.value = `${user.lastName}`;
+            lastname_ed.value = `${user.lastname}`;
             age_ed.value = `${user.age}`;
             email_ed.value = `${user.email}`;
 
@@ -55,7 +55,7 @@ async function editUser() {
         },
         body: JSON.stringify({
             username: form_ed.username.value,
-            lastName: form_ed.lastName.value,
+            lastname: form_ed.lastname.value,
             age:form_ed.age.value,
             email: form_ed.email.value,
             password: form_ed.password.value,

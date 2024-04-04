@@ -22,8 +22,4 @@ public class RoleServiceImpl implements RoleService {
         return roleRepo.findAll();
     }
 
-    @Override
-    public void saveRole(Role role) {
-        roleRepo.save(role);
-    }
 }

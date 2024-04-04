@@ -22,7 +22,7 @@ async function addNewUser(event) {
         },
         body: JSON.stringify({
             username: form_new.username.value,
-            lastname: form_new.lastName.value,
+            lastname: form_new.lastname.value,
             age: form_new.age.value,
             email: form_new.email.value,
             password: form_new.password.value,
