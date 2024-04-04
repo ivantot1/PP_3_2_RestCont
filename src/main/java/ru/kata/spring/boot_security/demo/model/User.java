@@ -16,7 +16,6 @@ import javax.persistence.Table;
 import java.util.Collection;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 
 @Entity
@@ -64,13 +63,6 @@ public class User implements UserDetails {
         return username;
     }
 
-//    public String getRoleNames() {
-//        return roles.stream()
-//                .map(role -> role.getName()
-//                        .replace("ROLE_", ""))
-//                .collect(Collectors.joining(" "));
-//    }
-
     @Override
     public boolean isAccountNonExpired() {
         return false;
@@ -94,7 +86,6 @@ public class User implements UserDetails {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
-
     }
 
     public int getAge() {
